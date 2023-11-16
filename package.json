@@ -6,11 +6,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pg": "^8.11.3",
     "tiny-env-config": "^1.0.0",
     "tiny-http-router": "^2.4.0"
   }
