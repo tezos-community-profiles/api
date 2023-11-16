@@ -6,7 +6,7 @@ import { get_profile } from './api/profile.js'
 //import './sentry.js'
 
 http.createServer(router({
-  '/': client(get_profile)
+  '/profile': client(get_profile)
   // POST PIN ipfs
 }, (req, res, { send }) => {
   send(200, 'Tezos Community Profiles API')
