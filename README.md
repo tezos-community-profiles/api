@@ -10,6 +10,12 @@ Free to use for anyone!
 
 ## Develop
 
+### Test IPFS pin
+
+```
+curl localhost:8080/pin/ipfs -XPOST -F 'file=@test-profile.json`
+```
+
 ## TODO
 
 enjoy.
