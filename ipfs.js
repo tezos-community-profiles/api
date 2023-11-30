@@ -14,16 +14,18 @@ import formidable from 'formidable'
 export async function pin(req, res, { send }) {
   const pass = new PassThrough()
   req.pipe(pass)
-  const form = new FormData()
-  form.set('file', pass) 
   const ipfs_res = await fetch(`${IPFS_API}/api/v0/add`, {
-    body: form,
+    body: pass,
     method: 'POST',
-    headers: { Authorization: `Basic ${btoa(IPFS_USER+":"+IPFS_PASS)}` }
+    headers: { 
+      'Authorization': `Basic ${btoa(IPFS_USER+":"+IPFS_PASS)}`, 
+      'Content-Type': req.headers['content-type'],
+      'Content-Length': req.headers['content-length']
+    }
   })
   if (ipfs_res.status != 200) {
     const text = await ipfs_res.text()
-    console.log('her', text)
+    console.error(text)
     throw new Error('SEH;500;Error on ipfs endpoint')
   }
   const ipfs_json = await ipfs_res.json()
