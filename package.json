@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "btoa": "^1.2.1",
+    "formdata-node": "^6.0.3",
     "formidable": "^3.5.1",
     "node-fetch": "^3.3.2",
     "pg": "^8.11.3",
