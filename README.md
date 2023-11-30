@@ -6,6 +6,8 @@ Free to use for anyone!
 
 ## Endpoints
 
+## Architecture
+
 ## Run
 
 ## Develop
@@ -15,7 +17,5 @@ Free to use for anyone!
 ```
 curl localhost:8080/pin/ipfs -XPOST -F 'file=@test-profile.json`
 ```
-
-## TODO
 
 enjoy.
