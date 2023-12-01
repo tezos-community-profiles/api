@@ -11,9 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tcprofiles/schemas": "^1.0.0",
     "btoa": "^1.2.1",
-    "formdata-node": "^6.0.3",
-    "formidable": "^3.5.1",
     "node-fetch": "^3.3.2",
     "pg": "^8.11.3",
     "tiny-env-config": "^1.0.0",

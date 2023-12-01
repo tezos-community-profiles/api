@@ -2,13 +2,11 @@ import fs from 'fs'
 import https from 'https'
 import fetch from 'node-fetch'
 import { PassThrough } from 'stream'
-import { FormData } from 'formdata-node'
 import {
   IPFS_API,
   IPFS_USER,
   IPFS_PASS
-} from './config.js'
-import formidable from 'formidable'
+} from '../config.js'
 
 // NOTE: This is infura API. Is it the same as standard IPFS API?
 export async function pin(req, res, { send }) {
