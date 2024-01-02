@@ -5,7 +5,7 @@ import { HTTP_PORT } from './config.js'
 import { pin as pin_ipfs } from './api/ipfs.js'
 import { get_profile } from './api/profile.js'
 import { validate_profile } from './api/validate.js'
-//import './sentry.js'
+import './sentry.js'
 
 http.createServer(router({
   '/profile/:address': client(get_profile),
